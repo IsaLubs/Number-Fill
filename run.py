@@ -167,3 +167,15 @@ def game():
                         print()
                         
                         print_Grid(grid)
+                        
+       else:
+            if number == "S":
+                save_game(grid, memory, Pos, alread_pos)
+                print("Game saved")
+                break
+            elif number == "U":
+                print("Undo")
+                if memory[-1] != 1:
+                    undo -= 1
+                    successor = memory[-1] - 1
+                    memory.pop()
