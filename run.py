@@ -78,3 +78,19 @@ def game():
         memory = [1]
         alread_pos = []
         successor = 1
+
+         print_Grid(grid)
+    level = True
+    while level:
+
+        number = input("\nEnter a number from 2 to 25  or S(save) or U(Undo) or R(Reset): ")
+        if number.isdigit():
+            number = int(number)
+        
+            if number - 1 != successor:
+                print("Invalid number")
+                continue
+            
+            elif number in memory:
+                print("Number already used")
+                continue
