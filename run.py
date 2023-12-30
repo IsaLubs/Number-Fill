@@ -179,3 +179,12 @@ def game():
                     undo -= 1
                     successor = memory[-1] - 1
                     memory.pop()
+
+                    grid[Pos[-1][0] - 1][Pos[-1][1] - 1] = 0
+                    alread_pos.pop()
+                    Pos.pop()
+                    print_Grid(grid)
+                elif undo == 0:
+                    print("No more Rollback left...")
+                else:
+                    print("Cannot undo anymore")       
