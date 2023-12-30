@@ -94,3 +94,41 @@ def game():
             elif number in memory:
                 print("Number already used")
                 continue
+
+            else:
+                while True:
+                    temp = input("Enter the position to place the number: ").split()
+                    if len(temp) == 2:
+                        x_u = int(temp[0])
+                        y_u = int(temp[1])
+                        adjacents = get_adjacent_cells(Pos[-1][0], Pos[-1][1], grid_size)
+
+                        if (x_u, y_u) in adjacents:
+
+                            if (x_u, y_u) in alread_pos:
+                                print("Already used position")
+                                continue
+                            else:
+                                x = x_u
+                                y = y_u
+                                grid[x_u - 1][y_u - 1] = number
+                                successor = number
+                                memory.append(number)
+                                alread_pos.append((x, y))
+                                Pos.append((x, y))
+                                print_Grid(grid)
+                                #print(grid)
+
+                                # if no 0 left in the grid
+                                flag = True
+                                for x in grid:
+                                    if 0 in x:
+                                        flag = False
+                                        break
+                                if flag:
+                                    print("You won the game")
+                                    
+                                    while True:
+                                        replay =  input("Do You want to  play again (Y/N)?")
+                                        if replay == 'Y': 
+                                            grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
