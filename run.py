@@ -151,3 +151,10 @@ def game():
                                         else:
                                             print("Invalid Input")
                                 break
+                            else:
+                            print("Invalid position")
+
+                            print()
+                            
+                            
+                            print_Grid(grid)
