@@ -27,3 +27,20 @@ def get_adjacent_cells(row, col, grid_size):
                 adjacent_cells.append((i, j))
 
     return adjacent_cells
+
+    def print_Grid(grid):
+    if len(grid[0]) == 5:
+        print("---------------------")
+        for x in grid:
+            tmp = [str(y) for y in x]
+            tmp = " |".join([" " + y if len(y) == 1 else y for y in tmp])
+            print("|" + tmp + " |")
+            print("---------------------")
+    else:
+        print("-----------------------------")
+        for x in grid:
+            tmp = [str(y) for y in x]
+            tmp = " |".join([" " + y if len(y) == 1 else y for y in tmp])
+            print("|" + tmp + " |")
+            print("-----------------------------")
+
