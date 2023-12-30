@@ -55,3 +55,12 @@ def game():
     
     undo = 5
     grid_size = 5
+
+    
+    # Show a 5x5 grid with number 1 randomly placed
+    try:
+        grid = load_game()[0]
+        memory = load_game()[1]
+        Pos = load_game()[2]
+        alread_pos = load_game()[3]
+        successor = memory[-1]
