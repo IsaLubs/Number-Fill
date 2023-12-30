@@ -1,4 +1,4 @@
-# Level 1
+2# Level 1
 import random
 import pickle
 
@@ -13,11 +13,12 @@ def save_game(grid, memory, pos, alread_pos):
     with open('game_state.pkl', 'wb') as f:
         pickle.dump(game_state, f)
 
-        def load_game():
+def load_game():
     with open('game_state.pkl', 'rb') as f:
         game_state = pickle.load(f)
     return game_state['grid'], game_state['memory'], game_state['pos'], game_state['alread_pos']
 
+    
 def get_adjacent_cells(row, col, grid_size):
     adjacent_cells = []
 
@@ -28,7 +29,8 @@ def get_adjacent_cells(row, col, grid_size):
 
     return adjacent_cells
 
-    def print_Grid(grid):
+
+def print_Grid(grid):
     if len(grid[0]) == 5:
         print("---------------------")
         for x in grid:
@@ -44,6 +46,7 @@ def get_adjacent_cells(row, col, grid_size):
             print("|" + tmp + " |")
             print("-----------------------------")
 
+
 def game():
     print("Welcome to NUMBER FILL board game")
     print("Rules: ")
@@ -56,7 +59,7 @@ def game():
     undo = 5
     grid_size = 5
 
-    
+
     # Show a 5x5 grid with number 1 randomly placed
     try:
         grid = load_game()[0]
@@ -65,7 +68,7 @@ def game():
         alread_pos = load_game()[3]
         successor = memory[-1]
 
-        except:
+    except:
         
         grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
         
@@ -79,7 +82,8 @@ def game():
         alread_pos = []
         successor = 1
 
-         print_Grid(grid)
+
+    print_Grid(grid)
     level = True
     while level:
 
@@ -94,7 +98,7 @@ def game():
             elif number in memory:
                 print("Number already used")
                 continue
-
+                
             else:
                 while True:
                     temp = input("Enter the position to place the number: ").split()
@@ -132,7 +136,7 @@ def game():
                                         replay =  input("Do You want to  play again (Y/N)?")
                                         if replay == 'Y': 
                                             grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
-
+                                                
                                             # Place 1 at a random position and get the position
                                             x = random.randint(1, grid_size)
                                             y = random.randint(1, grid_size)
@@ -151,24 +155,23 @@ def game():
                                         else:
                                             print("Invalid Input")
                                 break
-                            else:
+                        else:
                             print("Invalid position")
 
                             print()
                             
                             
                             print_Grid(grid)
-    
 
-
-               else:
+                    else:
                         print("Invalid position")
 
                         print()
                         
                         print_Grid(grid)
-                        
-       else:
+
+
+        else:
             if number == "S":
                 save_game(grid, memory, Pos, alread_pos)
                 print("Game saved")
@@ -187,9 +190,9 @@ def game():
                 elif undo == 0:
                     print("No more Rollback left...")
                 else:
-                    print("Cannot undo anymore")       
-
-         elif number == "R":
+                    print("Cannot undo anymore")
+        
+            elif number == "R":
                 grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
                     
                 # Place 1 at a random position and get the position
@@ -204,12 +207,9 @@ def game():
                 save_game(grid, memory, Pos, alread_pos)
                 game()
 
-                else:
+            else:
                 print("Invalid Please enter a number or S or U for saving or rollback")
                 continue
-            
 
 if __name__ == "__main__":
     game()
-
-            
