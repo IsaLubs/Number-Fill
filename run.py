@@ -44,3 +44,14 @@ def get_adjacent_cells(row, col, grid_size):
             print("|" + tmp + " |")
             print("-----------------------------")
 
+def game():
+    print("Welcome to NUMBER FILL board game")
+    print("Rules: ")
+    print("1. You can only place a number next to the previous number")
+    print("2. You can only place a number in the adjacent cell of the previous number")
+    print("3. You can place the number in North, South, East, West North-East, North-West, South-East, South-West")
+    print()
+    
+    
+    undo = 5
+    grid_size = 5
