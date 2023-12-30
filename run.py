@@ -188,3 +188,19 @@ def game():
                     print("No more Rollback left...")
                 else:
                     print("Cannot undo anymore")       
+
+         elif number == "R":
+                grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
+                    
+                # Place 1 at a random position and get the position
+                x = random.randint(1, grid_size)
+                y = random.randint(1, grid_size)
+                print("Current Position: ", x, "," ,y)
+                grid[x - 1][y - 1] = 1
+                Pos = [(x, y)]
+                memory = [1]
+                alread_pos = []
+                successor = 1
+                save_game(grid, memory, Pos, alread_pos)
+                game()
+     
