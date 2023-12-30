@@ -158,3 +158,12 @@ def game():
                             
                             
                             print_Grid(grid)
+    
+
+
+               else:
+                        print("Invalid position")
+
+                        print()
+                        
+                        print_Grid(grid)
