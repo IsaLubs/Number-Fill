@@ -203,4 +203,13 @@ def game():
                 successor = 1
                 save_game(grid, memory, Pos, alread_pos)
                 game()
-     
+
+                else:
+                print("Invalid Please enter a number or S or U for saving or rollback")
+                continue
+            
+
+if __name__ == "__main__":
+    game()
+
+            
