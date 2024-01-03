@@ -16,7 +16,7 @@ def save_game(grid, memor, pos, allpos):
 def load_game():
     with open('game_state.pkl', 'rb') as f:
         g_state = pickle.load(f)
-    return g_state['grid'], g_state['memory'], g_state['pos'], g_state['allpos']
+    return g_state['grid'], g_state['memor'], g_state['pos'], g_state['allpos']
 
 
 def adj_cell(row, col, grid_size):
