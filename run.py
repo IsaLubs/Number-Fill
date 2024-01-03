@@ -1,30 +1,31 @@
-2# Level 1
 import random
 import pickle
 
 
-def save_game(grid, memory, pos, alread_pos):
-    game_state = {
+def save_game(grid, memor, pos, allpos):
+    g_state = {
         'grid': grid,
-        'memory': memory,
+        'memor': memor,
         'pos': pos,
-        'alread_pos': alread_pos
+        'allpos': allpos
     }
     with open('game_state.pkl', 'wb') as f:
-        pickle.dump(game_state, f)
+        pickle.dump(g_state, f)
+
 
 def load_game():
     with open('game_state.pkl', 'rb') as f:
-        game_state = pickle.load(f)
-    return game_state['grid'], game_state['memory'], game_state['pos'], game_state['alread_pos']
+        g_state = pickle.load(f)
+    return g_state['grid'], g_state['memory'], g_state['pos'], g_state['allpos']
 
-    
-def get_adjacent_cells(row, col, grid_size):
+
+def adj_cell(row, col, grid_size):
     adjacent_cells = []
-
     for i in range(row - 1, row + 2):
         for j in range(col - 1, col + 2):
-            if 1 <= i <= grid_size and 1 <= j <= grid_size and (i != row or j != col):
+            a = 1 <= i <= grid_size
+            b = 1 <= j <= grid_size
+            if a and b and (i != row or j != col):
                 adjacent_cells.append((i, j))
 
     return adjacent_cells
@@ -48,68 +49,61 @@ def print_Grid(grid):
 
 
 def game():
-    print("Welcome to NUMBER FILL board game")
+    print("....NUMBER FILL....")
     print("Rules: ")
     print("1. You can only place a number next to the previous number")
-    print("2. You can only place a number in the adjacent cell of the previous number")
-    print("3. You can place the number in North, South, East, West North-East, North-West, South-East, South-West")
+    print("2. You can only place a number")
+    print("in the adjacent cell of the previous number")
+    print("3. You can place the number in North, South, East,")
+    print("West North-East, North-West, South-East, South-West")
     print()
-    
-    
     undo = 5
     grid_size = 5
-
 
     # Show a 5x5 grid with number 1 randomly placed
     try:
         grid = load_game()[0]
-        memory = load_game()[1]
+        memor = load_game()[1]
         Pos = load_game()[2]
-        alread_pos = load_game()[3]
-        successor = memory[-1]
-
-    except:
-        
+        allpos = load_game()[3]
+        successor = memor[-1]
+    except EOFError:
         grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
-        
         # Place 1 at a random position and get the position
         x = random.randint(1, grid_size)
         y = random.randint(1, grid_size)
-        print("Current Position: ", x, "," ,y)
+        print("Current Position: ", x, ",", y)
         grid[x - 1][y - 1] = 1
         Pos = [(x, y)]
-        memory = [1]
-        alread_pos = []
+        memor = [1]
+        allpos = []
         successor = 1
-
 
     print_Grid(grid)
     level = True
     while level:
-
-        number = input("\nEnter a number from 2 to 25  or S(save) or U(Undo) or R(Reset): ")
+        print("Enter a number from 2 to 25  ")
+        number = input("or S(save) or U(Undo) or R(Reset): ")
         if number.isdigit():
             number = int(number)
-        
             if number - 1 != successor:
                 print("Invalid number")
                 continue
-            
-            elif number in memory:
+            elif number in memor:
                 print("Number already used")
                 continue
-                
             else:
                 while True:
-                    temp = input("Enter the position to place the number: ").split()
+                    print("Enter the position to place the number: ")
+                    temp = input().split()
                     if len(temp) == 2:
                         x_u = int(temp[0])
                         y_u = int(temp[1])
-                        adjacents = get_adjacent_cells(Pos[-1][0], Pos[-1][1], grid_size)
+                        adjacents = adj_cell(Pos[-1][0], Pos[-1][1], grid_size)
 
                         if (x_u, y_u) in adjacents:
 
-                            if (x_u, y_u) in alread_pos:
+                            if (x_u, y_u) in allpos:
                                 print("Already used position")
                                 continue
                             else:
@@ -117,11 +111,10 @@ def game():
                                 y = y_u
                                 grid[x_u - 1][y_u - 1] = number
                                 successor = number
-                                memory.append(number)
-                                alread_pos.append((x, y))
+                                memor.append(number)
+                                allpos.append((x, y))
                                 Pos.append((x, y))
                                 print_Grid(grid)
-                                #print(grid)
 
                                 # if no 0 left in the grid
                                 flag = True
@@ -131,22 +124,24 @@ def game():
                                         break
                                 if flag:
                                     print("You won the game")
-                                    
                                     while True:
-                                        replay =  input("Do You want to  play again (Y/N)?")
-                                        if replay == 'Y': 
-                                            grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
-                                                
-                                            # Place 1 at a random position and get the position
+                                        print("Do You want to  play again?")
+                                        replay = input(" (Y/N) : ")
+                                        if replay == 'Y':
+                                            g = grid_size
+                                            lst = [0 for x in range(g)]
+                                            grid = [lst for y in range(g)]
+                                            # Place 1 at a random position
                                             x = random.randint(1, grid_size)
                                             y = random.randint(1, grid_size)
-                                            print("Current Position: ", x, "," ,y)
+                                            print("Current Position: ")
+                                            print(x, ",", y)
                                             grid[x - 1][y - 1] = 1
                                             Pos = [(x, y)]
-                                            memory = [1]
-                                            alread_pos = []
+                                            memor = [1]
+                                            allpos = []
                                             successor = 1
-                                            save_game(grid, memory, Pos, alread_pos)
+                                            save_game(grid, memor, Pos, allpos)
                                             print_Grid(grid)
                                             game()
                                         elif replay == 'N':
@@ -159,57 +154,54 @@ def game():
                             print("Invalid position")
 
                             print()
-                            
-                            
                             print_Grid(grid)
 
                     else:
                         print("Invalid position")
 
                         print()
-                        
                         print_Grid(grid)
-
 
         else:
             if number == "S":
-                save_game(grid, memory, Pos, alread_pos)
+                save_game(grid, memor, Pos, allpos)
                 print("Game saved")
                 break
             elif number == "U":
                 print("Undo")
-                if memory[-1] != 1:
+                if memor[-1] != 1:
                     undo -= 1
-                    successor = memory[-1] - 1
-                    memory.pop()
+                    successor = memor[-1] - 1
+                    memor.pop()
 
                     grid[Pos[-1][0] - 1][Pos[-1][1] - 1] = 0
-                    alread_pos.pop()
+                    allpos.pop()
                     Pos.pop()
                     print_Grid(grid)
                 elif undo == 0:
                     print("No more Rollback left...")
                 else:
                     print("Cannot undo anymore")
-        
             elif number == "R":
-                grid = [[0 for x in range(grid_size)] for y in range(grid_size)]
-                    
+                g_size = grid_size
+                grid = [[0 for x in range(g_size)] for y in range(g_size)]
                 # Place 1 at a random position and get the position
                 x = random.randint(1, grid_size)
                 y = random.randint(1, grid_size)
-                print("Current Position: ", x, "," ,y)
+                print("Current Position: ", x, ",", y)
                 grid[x - 1][y - 1] = 1
                 Pos = [(x, y)]
-                memory = [1]
-                alread_pos = []
+                memor = [1]
+                allpos = []
                 successor = 1
-                save_game(grid, memory, Pos, alread_pos)
+                save_game(grid, memor, Pos, allpos)
                 game()
 
             else:
-                print("Invalid Please enter a number or S or U for saving or rollback")
+                print("Invalid Input")
+                print("Please enter a number or S or U for saving or rollback")
                 continue
+
 
 if __name__ == "__main__":
     game()
