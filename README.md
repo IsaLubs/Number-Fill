@@ -2,6 +2,8 @@
 
 - This is a game where players must fill a grid with numbers in a sequence. Players can only place a number next to the  previous number and in the adjacent cell of the  previous number. The game ends when the grid is completely filled.
 
+![2](https://github.com/IsaLubs/Number-Fill/assets/147058041/968e3b8c-ba1c-4a87-88cf-8cd96dbfdd53)
+
 # How to Play
 
 ### Starting the Game.
