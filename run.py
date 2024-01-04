@@ -89,7 +89,7 @@ def game():
             if number - 1 != successor:
                 print("Invalid number")
                 continue
-    
+
             elif number in memor:
                 print("Number already used")
                 continue
