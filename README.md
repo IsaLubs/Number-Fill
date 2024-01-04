@@ -24,6 +24,7 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 # Features
 ### Save and Load Game State.
 - You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
+  ![1](https://github.com/IsaLubs/Number-Fill/assets/147058041/72d20da3-81eb-480e-bcff-906d6ad5a656)
 ### Undo Last Move.
 - If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
 ### Reset Game.
@@ -34,6 +35,9 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 - This game can be easily deployed to Heroku. This makes it accessible to anyone, anywhere, at any time.
 
    These features enhance the gameplay experience and make the game more engaging and fun to play.
+
+![Number fil README](https://github.com/IsaLubs/Number-Fill/assets/147058041/87be1a0d-d706-4421-95a7-0e2d1dfaed4f)
+
 
 # Data Models
 - The game uses a dictionary to store the game state, which includes the grid, memory, position, and already placed positions. The grid is a 2D list representing the game board. The memory is a list storing all the numbers placed so far. The position is a list storing the positions of the numbers placed. The already placed positions is a list storing the positions that have been filled with numbers.
