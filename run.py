@@ -83,18 +83,19 @@ def game():
     level = True
     while level:
         print("Enter a number from 2 to 25  ")
-        number = input("or S(save) or U(Undo) or R(Reset): ")
+        number = input("or S(save) or U(Undo) or R(Reset):\n")
         if number.isdigit():
             number = int(number)
             if number - 1 != successor:
                 print("Invalid number")
                 continue
+    
             elif number in memor:
                 print("Number already used")
                 continue
             else:
                 while True:
-                    print("Enter the position to place the number: ")
+                    print("Enter the position to place the number:\n")
                     temp = input().split()
                     if len(temp) == 2:
                         x_u = int(temp[0])
@@ -126,7 +127,7 @@ def game():
                                     print("You won the game")
                                     while True:
                                         print("Do You want to  play again?")
-                                        replay = input(" (Y/N) : ")
+                                        replay = input(" (Y/N) :\n")
                                         if replay == 'Y':
                                             g = grid_size
                                             lst = [0 for x in range(g)]
