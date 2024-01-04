@@ -1,31 +1,60 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Number Fill 
 
-Welcome USER_NAME,
+- This is a game where players must fill a grid with numbers in a sequence. Players can only place a number next to the  previous number and in the adjacent cell of the  previous number. The game ends when the grid is completely filled.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# How to Play
 
-## Reminders
+### Starting the Game.
+- After installing and running the game, you will be prompted to enter a number between 2 and 25. This number will be the first number placed on the grid.
+### Placing Numbers.
+- Placing Numbers**: You can only place a number next to the previous number and in the adjacent cell of the previous number. Try to create a sequence of numbers across the grid.
+### Game Controls.
+While playing, you can use the following controls:
+ - Type 'S' to save the current game state.
+ - Type 'U' to undo the last move.
+ - Type 'R' to reset the game.
+ - Input coordinates to place a number on the grid.
+### Winning the Game.
+- The game ends when the grid is completely filled with numbers in a sequence. Congratulations, you've won!
+Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+# Features
+### Save and Load Game State.
+- You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
+### Undo Last Move.
+- If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
+### Reset Game.
+- If you want to start over, you can reset the game by typing 'R'. This clears the grid and lets you start a new game.
+### Input Coordinates
+- You can directly input coordinates to place a number on the grid. This gives you precise control over where you want to place your numbers.
+### Deployable to Heroku
+- This game can be easily deployed to Heroku. This makes it accessible to anyone, anywhere, at any time.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+   These features enhance the gameplay experience and make the game more engaging and fun to play.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+# Data Models
+- The game uses a dictionary to store the game state, which includes the grid, memory, position, and already placed positions. The grid is a 2D list representing the game board. The memory is a list storing all the numbers placed so far. The position is a list storing the positions of the numbers placed. The already placed positions is a list storing the positions that have been filled with numbers.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+# Testing
+I have manually tested this project by doing the following.
+- Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
+- Tested in my local terminal and the Code Institute Heroku terminal
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+# Bugs
+- No bugs were encountered.
 
-Connect your GitHub repository and deploy as normal.
+# Validator Testing 
+- PEP8
+   * No errors were returned from PEP8oline.com
+# Deployment
+- This project was deployed using Code Institute's mock terminal for Heroku.
+### Steps for deployment
+   * Fork or clone this repository
+   *  Create a new Heroku app
+   * Set the build back to Python and NodeJS in that order
+   * Link the Heroku app to the repository
+   * Click on Deploy
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+# Credits
+- Code Institute for the deployment terminal
