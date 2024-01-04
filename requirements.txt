@@ -12,7 +12,6 @@ lazr.uri==1.0.6
 more-itertools==8.10.0
 oauthlib==3.2.0
 Pygments==2.11.2
-PyGObject==3.42.1
 PyJWT==2.3.0
 pyparsing==2.4.7
 PyYAML==5.4.1
