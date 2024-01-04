@@ -45,9 +45,7 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 # Testing
 I have manually tested this project by doing the following.
 - Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
-- Tested in my local terminal and the Code Institute Heroku terminal
-![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
-
+- Tested in my local terminal and the Code Institute Heroku termina
 
 # Bugs
 - No bugs were encountered.
@@ -55,6 +53,8 @@ I have manually tested this project by doing the following.
 # Validator Testing 
 - PEP8
    * No errors were returned from PEP8oline.com
+
+![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
 # Deployment
 - This project was deployed using Code Institute's mock terminal for Heroku.
 ### Steps for deployment
