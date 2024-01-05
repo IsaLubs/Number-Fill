@@ -82,20 +82,30 @@ def game():
     print_Grid(grid)
     level = True
     while level:
-        print("Enter a number from 2 to 25  ")
-        number = input("or S(save) or U(Undo) or R(Reset):\n")
+        print("Enter a number from 2 to 25 ")
+        print("(The number should be in ascending order")
+        print("relative to the last one entered)")
+        number = input("Or S(save) or U(Undo) or R(Reset):\n")
         if number.isdigit():
             number = int(number)
             if number - 1 != successor:
                 print("Invalid number")
                 continue
-
             elif number in memor:
                 print("Number already used")
                 continue
             else:
                 while True:
-                    print("Enter the position to place the number:\n")
+                    print("\nEnter the position to place the number:")
+                    print("!!!")
+                    print("The position should be specified as 'X(space)Y',")
+                    print("where 'X' is the row and 'Y' is the column,")
+                    print("The square should be an empty cell with")
+                    print("empty neighbors around the last entered number.")
+                    print("!!!\n")
+                    print("## REMEMBER ##")
+                    print("If there are no empty cells, you will lose.")
+                    print("In such a case, you can run the game agian.\n")
                     temp = input().split()
                     if len(temp) == 2:
                         x_u = int(temp[0])
