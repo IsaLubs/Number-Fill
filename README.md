@@ -26,7 +26,8 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 ### Save and Load Game State.
 - You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
  
-  
+  ![p](https://github.com/IsaLubs/Number-Fill/assets/147058041/f01530f6-49d6-41a7-98f6-bd680846272d)
+
 ### Undo Last Move.
 - If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
 ### Reset Game.
