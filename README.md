@@ -20,11 +20,13 @@ While playing, you can use the following controls:
 - The game ends when the grid is completely filled with numbers in a sequence. Congratulations, you've won!
 Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
 
+![y](https://github.com/IsaLubs/Number-Fill/assets/147058041/ce3942d6-917f-4f87-b1d8-c8f2a248bcb3)
 
 # Features
 ### Save and Load Game State.
 - You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
-  ![1](https://github.com/IsaLubs/Number-Fill/assets/147058041/72d20da3-81eb-480e-bcff-906d6ad5a656)
+ 
+  
 ### Undo Last Move.
 - If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
 ### Reset Game.
