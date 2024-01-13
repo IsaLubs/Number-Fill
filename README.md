@@ -39,11 +39,12 @@ While playing, you can use the following controls:
  - Type 'U' to undo the last move.
  - Type 'R' to reset the game.
  - Input coordinates to place a number on the grid.
+
+   ![y](https://github.com/IsaLubs/Number-Fill/assets/147058041/ce3942d6-917f-4f87-b1d8-c8f2a248bcb3)
 ### Winning the Game.
 - The game ends when the grid is completely filled with numbers in a sequence. Congratulations, you've won!
 Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
 
-![y](https://github.com/IsaLubs/Number-Fill/assets/147058041/ce3942d6-917f-4f87-b1d8-c8f2a248bcb3)
 
 # Features
 ### Save and Load Game State.
