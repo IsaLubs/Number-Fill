@@ -60,7 +60,7 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 # Data Models
 - The game uses a dictionary to store the game state, which includes the grid, memory, position, and already placed positions. The grid is a 2D list representing the game board. The memory is a list storing all the numbers placed so far. The position is a list storing the positions of the numbers placed. The already placed positions is a list storing the positions that have been filled with numbers.
 
-## Technologies Used
+# Technologies Used
 ### Main Language 
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) was used to build the contents and structure of the game. 
 
