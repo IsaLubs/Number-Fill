@@ -19,7 +19,8 @@ As a user,
 * I would like to know the progress of the game while playing the game.
 * I would like to have the option to play again or finish the game after each game. 
 
-## How to Play
+
+## Features
 
 ### Starting the Game.
 - After installing and running the game, you will be prompted to enter a number between 2 and 25. This number will be the first number placed on the grid.
@@ -33,6 +34,11 @@ As a user,
   ![2](https://github.com/IsaLubs/Number-Fill/assets/147058041/c5067cde-ff30-4c52-87f3-b0516d121868)
 
   
+### Save and Load Game State.
+- You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
+ 
+  ![p](https://github.com/IsaLubs/Number-Fill/assets/147058041/f01530f6-49d6-41a7-98f6-bd680846272d)
+
 ### Game Controls.
 While playing, you can use the following controls:
  - Type 'S' to save the current game state.
@@ -42,18 +48,13 @@ While playing, you can use the following controls:
 
    ![y](https://github.com/IsaLubs/Number-Fill/assets/147058041/ce3942d6-917f-4f87-b1d8-c8f2a248bcb3)
 ### Winning the Game.
+
 - The game ends when the grid is completely filled with numbers in a sequence. Congratulations, you've won!
 Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
 
-
-## Features
-### Save and Load Game State.
-- You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
- 
-  ![p](https://github.com/IsaLubs/Number-Fill/assets/147058041/f01530f6-49d6-41a7-98f6-bd680846272d)
-
 ### Undo Last Move.
 - If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
+  
 ### Reset Game.
 - If you want to start over, you can reset the game by typing 'R'. This clears the grid and lets you start a new game.
 ### Input Coordinates
