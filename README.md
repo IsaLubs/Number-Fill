@@ -134,3 +134,7 @@ The steps for deploying the application are as follows:
 
 # Credits
 - Code Institute for the deployment terminal
+- Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
+
+## Acknowledgements
+The Number Fill game was created as a portfolio 3 project for the Full Stack Software Development course at [Code Institute](https://codeinstitute.net/ie/).
