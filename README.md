@@ -132,7 +132,7 @@ The steps for deploying the application are as follows:
 ### Other Online Resources used
 * [Figma](https://www.figma.com) was used to generate the flow chart to plan the logic flow of the game.
 
-# Credits
+## Credits
 - Code Institute for the deployment terminal
 - Code to clear the terminal is from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 
