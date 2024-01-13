@@ -10,7 +10,7 @@ https://github.com/IsaLubs/Number-Fill
 
 ## UX & Design
 
-### User Stories
+## User Stories
 As a user,  
 * I would like to understand how to play the game with ease.
 * I would like to be able to set the difficulty to suit my level.
@@ -19,7 +19,7 @@ As a user,
 * I would like to know the progress of the game while playing the game.
 * I would like to have the option to play again or finish the game after each game. 
 
-# How to Play
+## How to Play
 
 ### Starting the Game.
 - After installing and running the game, you will be prompted to enter a number between 2 and 25. This number will be the first number placed on the grid.
@@ -46,7 +46,7 @@ While playing, you can use the following controls:
 Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
 
 
-# Features
+## Features
 ### Save and Load Game State.
 - You can save your current game state at any time by typing 'S'. This allows you to resume your game later from exactly where you left off.
  
@@ -59,6 +59,19 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 ### Input Coordinates
 - You can directly input coordinates to place a number on the grid. This gives you precise control over where you want to place your numbers.
 
+## Testing
+I have manually tested this project by doing the following.
+- Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
+- Tested in my local terminal and the Code Institute Heroku termina
+
+## Bugs
+- No bugs were encountered.
+
+## Validator Testing 
+- PEP8
+   * No errors were returned from PEP8oline.com
+
+![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
 ## Deployable to Heroku
 This application has been deployed using [Heroku](https://www.heroku.com/). The live link can be found here -[Number Fill](https://numberfill-a461588b1f61.herokuapp.com/)
 game.herokuapp.com/).  
@@ -69,22 +82,7 @@ The steps for deploying the application are as follows:
 1. In order for input methods to work correctly in the terminal of the deployed website, add a new line character `\n` at the end of each text inside the input method so that the input request will be displayed in the terminal.
 2. If there are dependencies to run the application on [Heroku](https://www.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
-
-
-# Testing
-I have manually tested this project by doing the following.
-- Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
-- Tested in my local terminal and the Code Institute Heroku termina
-
-# Bugs
-- No bugs were encountered.
-
-# Validator Testing 
-- PEP8
-   * No errors were returned from PEP8oline.com
-
-![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
-
+   
 ### Deploying the Application to Heroku:
 1. Log into [Heroku](https://www.heroku.com/) website.
 2. From the Dashboard page, select "New" and then "Create new app."
