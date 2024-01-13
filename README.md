@@ -5,7 +5,19 @@ This is a game where players must fill a grid with numbers in a sequence. Player
 
 ![g](https://github.com/IsaLubs/Number-Fill/assets/147058041/08c009a9-c5eb-4598-a75b-342991283929)
 
+## Repository
+https://github.com/IsaLubs/Number-Fill
 
+## UX & Design
+
+### User Stories
+As a user,  
+* I would like to understand how to play the game with ease.
+* I would like to be able to set the difficulty to suit my level.
+* I would like feedback on each level while playing the game.
+* I would like to see an error message if my guess is invalid and understand why.
+* I would like to know the progress of the game while playing the game.
+* I would like to have the option to play again or finish the game after each game. 
 
 # How to Play
 
