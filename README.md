@@ -22,11 +22,15 @@ As a user,
 # How to Play
 
 ### Starting the Game.
-![1](https://github.com/IsaLubs/Number-Fill/assets/147058041/929fb890-e228-47ff-ba61-74fd1ad11950)
 
 - After installing and running the game, you will be prompted to enter a number between 2 and 25. This number will be the first number placed on the grid.
+  ![1](https://github.com/IsaLubs/Number-Fill/assets/147058041/929fb890-e228-47ff-ba61-74fd1ad11950)
+  
 ### Placing Numbers.
 - Placing Numbers**: You can only place a number next to the previous number and in the adjacent cell of the previous number. Try to create a sequence of numbers across the grid.
+![2](https://github.com/IsaLubs/Number-Fill/assets/147058041/c5067cde-ff30-4c52-87f3-b0516d121868)
+
+  
 ### Game Controls.
 While playing, you can use the following controls:
  - Type 'S' to save the current game state.
