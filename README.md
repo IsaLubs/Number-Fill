@@ -60,6 +60,25 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 # Data Models
 - The game uses a dictionary to store the game state, which includes the grid, memory, position, and already placed positions. The grid is a 2D list representing the game board. The memory is a list storing all the numbers placed so far. The position is a list storing the positions of the numbers placed. The already placed positions is a list storing the positions that have been filled with numbers.
 
+## Technologies Used
+### Main Language 
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) was used to build the contents and structure of the game. 
+
+### Tools used for Developing the Game
+* [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
+* [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
+* [GitHub](https://github.com/) was used to store the repository and the codes.
+* [Heroku](https://www.heroku.com) was used to deploy the application.
+
+### Tool used for Validating the Codes
+* [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
+
+### Other Online Resources used
+* [Figma](https://www.figma.com) was used to generate the flow chart to plan the logic flow of the game.
+* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF images.
+* [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
+* [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
+
 # Testing
 I have manually tested this project by doing the following.
 - Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
