@@ -27,7 +27,9 @@ As a user,
   ![1](https://github.com/IsaLubs/Number-Fill/assets/147058041/929fb890-e228-47ff-ba61-74fd1ad11950)
   
 ### Placing Numbers.
-- Placing Numbers**: You can only place a number next to the previous number and in the adjacent cell of the previous number. Try to create a sequence of numbers across the grid.
+- Placing Numbers**: You can only place a number next to the previous number and in the adjacent cell of the previous number.
+  Try to create a sequence of numbers across the grid.
+  
   ![2](https://github.com/IsaLubs/Number-Fill/assets/147058041/c5067cde-ff30-4c52-87f3-b0516d121868)
 
   
