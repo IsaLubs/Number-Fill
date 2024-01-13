@@ -1,5 +1,6 @@
 # Number Fill 
 [Visit the website here](https://numberfill-a461588b1f61.herokuapp.com/)
+
 This is a game where players must fill a grid with numbers in a sequence. Players can only place a number next to the  previous number and in the adjacent cell of the  previous number. The game ends when the grid is completely filled.
 
 ![g](https://github.com/IsaLubs/Number-Fill/assets/147058041/08c009a9-c5eb-4598-a75b-342991283929)
