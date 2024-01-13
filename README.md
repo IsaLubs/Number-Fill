@@ -9,7 +9,7 @@ This is a game where players must fill a grid with numbers in a sequence. Player
 https://github.com/IsaLubs/Number-Fill
 
 ## UX & Design
-<img src="docs/welcome-page.png" width="700">
+
 ### User Stories
 As a user,  
 * I would like to understand how to play the game with ease.
