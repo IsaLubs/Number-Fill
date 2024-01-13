@@ -58,13 +58,74 @@ Remember, the goal of the game is to fill the entire grid with numbers in a sequ
 - If you want to start over, you can reset the game by typing 'R'. This clears the grid and lets you start a new game.
 ### Input Coordinates
 - You can directly input coordinates to place a number on the grid. This gives you precise control over where you want to place your numbers.
-### Deployable to Heroku
-- This game can be easily deployed to Heroku. This makes it accessible to anyone, anywhere, at any time.
 
-   These features enhance the gameplay experience and make the game more engaging and fun to play.
+## Deployable to Heroku
+This application has been deployed using [Heroku](https://www.heroku.com/). The live link can be found here - [Melting Snowman](https://the-melting-snowman-game.herokuapp.com/).  
 
-![Number fil README](https://github.com/IsaLubs/Number-Fill/assets/147058041/87be1a0d-d706-4421-95a7-0e2d1dfaed4f)
+The steps for deploying the application are as follows:
 
+### Preparation:
+1. In order for input methods to work correctly in the terminal of the deployed website, add a new line character `\n` at the end of each text inside the input method so that the input request will be displayed in the terminal.
+2. If there are dependencies to run the application on [Heroku](https://www.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
+3. Push all updates to GitHub.
+
+### Deploying the Application to Heroku:
+1. Log into [Heroku](https://www.heroku.com/) website.
+2. From the Dashboard page, select "New" and then "Create new app."
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-create-new-app.png" width="600">
+    </details>
+3. Assign a name for the application, select the region and then select "Create app."
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-create-app-name.png" width="500">
+    </details>   
+4. Once the application is created, from the submenu at the top, select "Settings" and then "Reveal Config Vars" to set up config vars.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-settings-config.png" width="600">
+    </details>  
+5. In the KEY input field, enter "PORT" all in capitals and enter "8000" for the VALUE input field and select "Add." If there are other config vars required to run the application, add those here. For this application, there is no other config var required.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-config-var.png" width="600">
+    </details>   
+6. Scroll down to the "Buildpacks" section and select "Add buildpack."
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-buildpack.png" width="600">
+    </details> 
+7. Add buildpacks required to run the application. For this application, "Python" and "Nodejs" are required.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-add-python.png" width="450">
+      <img src="docs/heroku-add-nodejs.png" width="450">
+    </details> 
+    The order of the buildpacks is important. "Python" should be the first and then "Nodejs." If they are not in the correct order, click and drag to change.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-buildpacks-order.png" width="600">
+    </details> 
+8. Select "Deploy" from the submenu at the top.
+    * Under the "Deployment method" section, select "GitHub" to connect to GitHub.
+    * Under the "Connect to GitHub" section, enter the name of the repository and select "Search."
+    * Once the repository is located, select "Connect" to connect the repository to the application within [Heroku](https://www.heroku.com/).  
+        <details>
+          <summary>Image for this step</summary>
+          <img src="docs/heroku-deploy.png" width="650">
+        </details>    
+9. Select either "Enable Automatic Deploys" which will deploy a new version of the application every time changes are pushed to GitHub or opt for "Manual Deploy." For this application, "Automatic Deploys" was selected.
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-auto-or-manual-deploy.png" width="600">
+    </details>
+10. Once the application is deployed, scroll back to the top of the screen and select "Open app."  
+    <details>
+      <summary>Image for this step</summary>
+      <img src="docs/heroku-open-app.png" width="600">
+    </details>   
+    If "Enable Automatic Deploys" has been selected, the application will be built and available after the next changes are pushed to GitHub.
 
 # Data Models
 - The game uses a dictionary to store the game state, which includes the grid, memory, position, and already placed positions. The grid is a 2D list representing the game board. The memory is a list storing all the numbers placed so far. The position is a list storing the positions of the numbers placed. The already placed positions is a list storing the positions that have been filled with numbers.
