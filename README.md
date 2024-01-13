@@ -70,6 +70,21 @@ The steps for deploying the application are as follows:
 2. If there are dependencies to run the application on [Heroku](https://www.heroku.com/), run `pip3 freeze > requirements.txt` command which will update the "requirements.txt" file to include those dependencies. 
 3. Push all updates to GitHub.
 
+
+# Testing
+I have manually tested this project by doing the following.
+- Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
+- Tested in my local terminal and the Code Institute Heroku termina
+
+# Bugs
+- No bugs were encountered.
+
+# Validator Testing 
+- PEP8
+   * No errors were returned from PEP8oline.com
+
+![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
+
 ### Deploying the Application to Heroku:
 1. Log into [Heroku](https://www.heroku.com/) website.
 2. From the Dashboard page, select "New" and then "Create new app."
@@ -118,31 +133,6 @@ The steps for deploying the application are as follows:
 
 ### Other Online Resources used
 * [Figma](https://www.figma.com) was used to generate the flow chart to plan the logic flow of the game.
-* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF images.
-* [Compressor.io](https://compressor.io/) was used to compress the images used in the README file.
-* [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
-
-# Testing
-I have manually tested this project by doing the following.
-- Given invalid inputs: Strings when numbers are expected, out of bounds inputs, same input twice, wrong coordinates
-- Tested in my local terminal and the Code Institute Heroku termina
-
-# Bugs
-- No bugs were encountered.
-
-# Validator Testing 
-- PEP8
-   * No errors were returned from PEP8oline.com
-
-![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/d4c0eaeb-ded3-4a13-ad22-f82fb97a9e97)
-# Deployment
-- This project was deployed using Code Institute's mock terminal for Heroku.
-### Steps for deployment
-   * Fork or clone this repository
-   *  Create a new Heroku app
-   * Set the build back to Python and NodeJS in that order
-   * Link the Heroku app to the repository
-   * Click on Deploy
 
 # Credits
 - Code Institute for the deployment terminal
