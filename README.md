@@ -51,6 +51,8 @@ While playing, you can use the following controls:
 
 - The game ends when the grid is completely filled with numbers in a sequence. Congratulations, you've won!
 Remember, the goal of the game is to fill the entire grid with numbers in a sequence. Good luck and enjoy the game!
+![t](https://github.com/IsaLubs/Number-Fill/assets/147058041/c1a08a8c-b741-44b3-840a-0c024f2ecb16)
+
 
 ### Undo Last Move.
 - If you accidentally place a number incorrectly, you can undo your last move by typing 'U'. This gives you another chance to correct your mistake.
