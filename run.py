@@ -3,6 +3,22 @@ import pickle
 
 
 def save_game(grid, memor, pos, allpos):
+   """
+   Save the current state of the game.
+
+   This function saves the current state of the game, 
+   including the grid, memo,
+   position, and alien position.
+
+   Parameters:
+   grid (list): The current state of the game grid.
+   memo (list): The list of numbers used in the game.
+   pos (tuple): The current position in the game grid.
+   al_pos (list): The positions of aliens in the game grid.
+
+   Returns:
+   None
+   """
     g_state = {
         'grid': grid,
         'memor': memor,
@@ -14,12 +30,35 @@ def save_game(grid, memor, pos, allpos):
 
 
 def load_game():
+   """
+   Load the previously saved game state.
+
+   This function loads the previously saved 
+   game state from a file named 'game_state'.
+
+   Returns:
+   tuple: The loaded game state including the grid,
+   memo, position, and alien position.
+   """
     with open('game_state.pkl', 'rb') as f:
         g_state = pickle.load(f)
     return g_state['grid'], g_state['memor'], g_state['pos'], g_state['allpos']
 
 
 def adj_cell(row, col, grid_size):
+   """
+   Get the adjacent cells of a given cell in the grid.
+
+   This function gets the adjacent cells of a given cell in the grid.
+
+   Parameters:
+   row (int): The row index of the given cell.
+   col (int): The column index of the given cell.
+   grid_size (int): The size of the game grid.
+
+   Returns:
+   list: The list of adjacent cells.
+   """
     adjacent_cells = []
     for i in range(row - 1, row + 2):
         for j in range(col - 1, col + 2):
@@ -32,6 +71,17 @@ def adj_cell(row, col, grid_size):
 
 
 def print_Grid(grid):
+   """
+   Print the game grid.
+
+   This function prints the game grid.
+
+   Parameters:
+   grid (list): The game grid.
+
+   Returns:
+   None
+   """
     if len(grid[0]) == 5:
         print("---------------------")
         for x in grid:
@@ -49,6 +99,11 @@ def print_Grid(grid):
 
 
 def game():
+   """
+   Main game loop.
+
+   This function runs the main game loop.
+   """
     print("....NUMBER FILL....")
     print("Rules: ")
     print("1. You can only place a number next to the previous number")
