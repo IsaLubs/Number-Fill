@@ -3,13 +3,12 @@ import pickle
 
 
 def save_game(grid, memor, pos, allpos):
-   """
+    """
    Save the current state of the game.
-
-   This function saves the current state of the game, 
+   This function saves the current state
+   of the game,
    including the grid, memo,
    position, and alien position.
-
    Parameters:
    grid (list): The current state of the game grid.
    memo (list): The list of numbers used in the game.
@@ -18,7 +17,7 @@ def save_game(grid, memor, pos, allpos):
 
    Returns:
    None
-   """
+    """
     g_state = {
         'grid': grid,
         'memor': memor,
@@ -30,10 +29,9 @@ def save_game(grid, memor, pos, allpos):
 
 
 def load_game():
-   """
+    """
    Load the previously saved game state.
-
-   This function loads the previously saved 
+   This function loads the previously saved
    game state from a file named 'game_state'.
 
    Returns:
@@ -46,7 +44,7 @@ def load_game():
 
 
 def adj_cell(row, col, grid_size):
-   """
+    """
    Get the adjacent cells of a given cell in the grid.
 
    This function gets the adjacent cells of a given cell in the grid.
@@ -71,7 +69,7 @@ def adj_cell(row, col, grid_size):
 
 
 def print_Grid(grid):
-   """
+    """
    Print the game grid.
 
    This function prints the game grid.
@@ -99,7 +97,7 @@ def print_Grid(grid):
 
 
 def game():
-   """
+    """
    Main game loop.
 
    This function runs the main game loop.
