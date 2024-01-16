@@ -132,8 +132,6 @@ The steps for deploying the application are as follows:
 ### Tool used for Validating the Codes
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes. 
 
-### Other Online Resources used
-* [Figma](https://www.figma.com) was used to generate the flow chart to plan the logic flow of the game.
 
 ## Credits
 - Code Institute for the deployment terminal
